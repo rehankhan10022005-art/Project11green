@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Titan Fitness - Raipur</title>
+<meta name="description" content="Titan Fitness — Raipur's premium fitness destination. World-class equipment, expert coaching, and a motivating community.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div id="splash-screen">
+  <div class="splash-logo-wrapper">
+    <img src="img/titanpng2.png" id="splash-logo" alt="Titan Fitness">
+    <div id="laser-sweep"></div>
+  </div>
+</div>  
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo"><img src="img/titanlogo.png" alt="Titan Logo" class="nav-logo-img"></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" style="color:var(--gold);">Home</a></li>
+    <li><a href="training.html">Trainers</a></li>
+    <li><a href="membership.html">Memberships</a></li>
+    <li><a href="aboutus.html">AboutUs</a></li>
+    <li><a href="facilities.html">Facilities</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="rankings.html">Rankings</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="mobile-nav-btn-container"><a href="membership.html" class="nav-btn">Join Now</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="nav-socials">
+      <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+      <a href="https://www.instagram.com/titangym999" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12.2 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+    </div>
+    <a href="membership.html" class="nav-btn">Join Now</a>
+  </div>
+  <div class="mobile-menu-btn" id="mobile-menu-btn"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="hero" id="hero">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source data-edit-id="home-hero-video" src="vid/gallery-vid-02.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <div class="hero-headline">
+      <span class="text-forged">DISCIPLINE IS</span>
+      <span class="text-strength">DESIGNED, NOT WILLED</span>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES TEASER -->
+<section class="home-facilities-teaser">
+  <div class="section-head" data-aos="fade-up">
+    <div class="eyebrow">A Glimpse Inside</div>
+    <h2>Our <span>Facilities</span></h2>
+    <p>Every zone at Titan Fitness is engineered for performance.</p>
+  </div>
+  <div class="zz-scroll-container" id="home-zz-gallery">
+    <div class="zz-feature-row">
+      <div class="zz-image-box"><img data-edit-id="home-feature-img-1" src="img/gallery-10-render-shot.jpeg" alt="Bio-Mechanic Equipment"></div>
+      <div class="zz-text-box">
+        <span class="zz-tag">Strength Floor</span><h3>Bio-Mechanic Equipment</h3>
+        <p>International-grade machines engineered for perfect muscle isolation and joint safety.</p>
+        <div class="zz-detail">Every rack and machine on our strength floor is calibrated for biomechanically correct movement, reducing injury risk while maximizing output.</div>
+        <span class="zz-tap-hint">Tap to reveal <span class="plus">+</span></span>
+      </div>
+    </div>
+    <div class="zz-feature-row">
+      <div class="zz-image-box"><img data-edit-id="home-feature-img-2" src="img/assets/gallery-02-cardio-floor.jpeg" alt="High-Performance Turf"></div>
+      <div class="zz-text-box">
+        <span class="zz-tag">Conditioning</span><h3>High-Performance Turf</h3>
+        <p>Dedicated functional zones with sleds, battle ropes, and plyo boxes for explosive conditioning.</p>
+        <div class="zz-detail">Our turf zone is built for athletic conditioning — sled pushes, rope work, and plyometrics that build power, speed, and stamina in one session.</div>
+        <span class="zz-tap-hint">Tap to reveal <span class="plus">+</span></span>
+      </div>
+    </div>
+    <div class="zz-feature-row">
+      <div class="zz-image-box"><img data-edit-id="home-feature-img-3" src="img/assets/gallery-07-machines.jpeg" alt="Elite Personal Training"></div>
+      <div class="zz-text-box">
+        <span class="zz-tag">Coaching</span><h3>Elite Personal Training</h3>
+        <p>Certified coaches who customize your nutrition and training blueprints for real results.</p>
+        <div class="zz-detail">Each member gets a personalized plan built around their goals, schedule, and recovery — reviewed and adjusted by a certified coach every step of the way.</div>
+        <span class="zz-tap-hint">Tap to reveal <span class="plus">+</span></span>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;" data-aos="fade-up"><a href="facilities.html" class="btn-primary">See All Facilities</a></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="google-reviews" id="reviews" data-aos="fade-in" data-aos-duration="1200">
+  <div class="section-head reviews-header" data-aos="fade-up">
+    <div class="eyebrow">Community Verified</div>
+    <h2>What Our <span>Members Say</span></h2>
+    <div class="rating-badge"><span class="score">4.8</span><span class="stars">★★★★★</span><span class="count">Based on Google Reviews</span></div>
+    <a href="https://maps.app.goo.gl/Q7sshWj2KMkL1dseA" target="_blank" rel="noopener" class="leave-review-btn">Leave Your Review</a>
+  </div>
+  <div class="reviews-grid container">
+<div class="review-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a4">M</div>
+                            <div class="reviewer-details">
+                                <h4>Mayank Satyarthi</h4>
+                                <div class="time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Titan Gym is one of the best gyms in Raipur. The trainers are professional and supportive, the equipment is modern, and the environment is highly motivating. Perfect place to achieve your fitness goals. Highly recommended!"</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a1">V</div>
+                            <div class="reviewer-details">
+                                <h4>Vishesh Sultania</h4>
+                                <div class="time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Best place to start your fitness journey. Motivating environment and friendly staff. Great workouts with real results. Definitely worth joining."</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a3">S</div>
+                            <div class="reviewer-details">
+                                <h4>sunny Deshmukh</h4>
+                                <div class="time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"The gym environment is excellent, with good cleanliness and well-maintained machines. The trainer here, Mr. Jay Dhiwar, is very supportive and explains every exercise properly while giving full attention. Overall, this gym is a perfect place for fitness."</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a6">S</div>
+                            <div class="reviewer-details">
+                                <h4>Shubham Thakur</h4>
+                                <div class="time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Best gym in Raipur yaha ka machine bahut acha hai mere pura muscle me effect padta hai ache Brend ke machine hai yaha lagbhag mere ko 3 month ho gaya hai 7 kg weights loss kar liya hu . Yaha trainer bahut supportive hai"</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a5">G</div>
+                            <div class="reviewer-details">
+                                <h4>Gaurav Paswan</h4>
+                                <div class="time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Titan Fitness ek bahut hi accha gym hai. Equipment modern aur well-maintained hai, environment energetic aur motivating rehta hai. Trainers bhi supportive hain aur proper guidance dete hain."</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a1">P</div>
+                            <div class="reviewer-details">
+                                <h4>Pooja Roy</h4>
+                                <div class="time">Edited 5 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"I’ve had a great experience at this gym. The equipment is well-maintained, and there’s a good variety for both strength training and cardio. The trainer vivek sir is very knowledgeable and supportive. They explain..."</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a2">P</div>
+                            <div class="reviewer-details">
+                                <h4>PRIYANKA</h4>
+                                <div class="time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="g-icon">
+                            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Excellent gym with a very motivating & positive environment. The equipments are advanced & well maintained. The overall vibe keeps you consistent. Separate classes for yoga , zumba and HIIT sessions are also available here."</p>
+                </div>
+                
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a3">P</div>
+                            <div class="reviewer-details"><h4>Payas Bharadwaj</h4><div class="time">Google Review</div></div>
+                        </div>
+                        <div class="g-icon"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"I liked this place because of one reason &quot;MACHINES&quot;. You can almost hit each and every body part. Now I have joined this gym post lockdown so can't say how the management team is. Overall best place for gym freaks! Note- They are taking care of sanitization and hygiene."</p>
+                </div>
+            </div>
+<div class="review-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+                <div>
+                    <div class="review-head">
+                        <div class="reviewer-info">
+                            <div class="avatar a5">K</div>
+                            <div class="reviewer-details"><h4>Kevanna Mutha</h4><div class="time">Google Review</div></div>
+                        </div>
+                        <div class="g-icon"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Great place to workout. One of the few gyms in the city to take all the precautions very seriously. Provides the very best facilities at an awesome price. Take the trial here, you'll know."</p>
+                </div>
+            </div>
+  </div>
+  <div style="text-align:center; margin-top:30px;"><a href="reviews.html" class="btn-ghost">Read All Reviews</a></div>
+</section>
+
+<!-- BMI -->
+<section class="bmi-section" id="bmi">
+  <div class="section-head" data-aos="fade-up"><div class="eyebrow">Know Your Numbers</div><h2>Assess Your <span>Metrics</span></h2></div>
+  <div class="bmi-container" data-aos="fade-up">
+    <div class="bmi-controls">
+      <div class="slider-group">
+        <div class="slider-label"><span>Height</span><span class="slider-value"><span id="height-val">175</span> cm</span></div>
+        <input type="range" id="bmi-height" min="120" max="220" value="175" oninput="calculateBMI()">
+      </div>
+      <div class="slider-group">
+        <div class="slider-label"><span>Weight</span><span class="slider-value"><span id="weight-val">70</span> kg</span></div>
+        <input type="range" id="bmi-weight" min="40" max="150" value="70" oninput="calculateBMI()">
+      </div>
+    </div>
+    <div class="bmi-results" id="bmi-results-box">
+      <div class="bmi-number" id="bmi-score">22.9</div>
+      <div class="bmi-category" id="bmi-cat">Normal Weight</div>
+      <div class="plan-recommendation">
+        <h4>Recommended Path</h4>
+        <div class="plan-name" id="plan-title">Performance & Maintenance</div>
+        <p style="color:#aaa; font-size:14px; margin-bottom:20px;" id="plan-desc">Optimize your fitness with a mix of strength training, conditioning, and flexibility work.</p>
+        <a href="membership.html#plan-3-months" class="btn-primary" id="bmi-plan-btn">View Recommended Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section" id="locations" onclick="window.open('https://maps.app.goo.gl/Q7sshWj2KMkL1dseA','_blank')">
+  <div class="map-overlay-gradient"></div>
+  <div class="floating-map-title"><h2>VISIT</h2><h2>US</h2></div>
+  <div id="titan-map"></div>
+  <div class="map-click-hint">Click anywhere to get directions</div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Titan Fitness. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/7389539555" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/firebase-config.js"></script>
+<script src="assets/admin-sync.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+AOS.init({ duration:1200, easing:'ease-in-out', once:true, offset:50 });
+
+// SPLASH
+window.addEventListener('load', function(){
+  const splash = document.getElementById('splash-screen');
+  const logo = document.getElementById('splash-logo');
+  const laser = document.getElementById('laser-sweep');
+  const navLogo = document.querySelector('.nav-logo-img');
+  const wrapper = document.querySelector('.splash-logo-wrapper');
+  if(!splash||!logo) return;
+  document.body.style.overflowY='hidden';
+  gsap.set(logo,{clipPath:'inset(0% 100% 0% 0%)'});
+  const tl = gsap.timeline({ onComplete:()=>{ splash.style.display='none'; document.body.style.overflowY=''; } });
+  tl.delay(0.4)
+    .to(laser,{opacity:1,duration:.3})
+    .to(laser,{left:'100%',duration:1.4,ease:'power2.inOut'},'sweep')
+    .to(logo,{clipPath:'inset(0% 0% 0% 0%)',duration:1.4,ease:'power2.inOut'},'sweep')
+    .to(laser,{opacity:0,duration:.3})
+    .to(wrapper,{
+        x:()=>navLogo.getBoundingClientRect().left - wrapper.getBoundingClientRect().left,
+        y:()=>navLogo.getBoundingClientRect().top - wrapper.getBoundingClientRect().top,
+        width:()=>navLogo.getBoundingClientRect().width,
+        duration:1.1, ease:'expo.inOut'
+    },'+=0.2')
+    .to(splash,{backgroundColor:'rgba(0,0,0,0)',duration:.7},'-=0.6');
+});
+
+// NAVBAR SCROLL
+window.addEventListener('scroll', function(){
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY>50);
+});
+
+// MOBILE MENU
+const mobileBtn=document.getElementById('mobile-menu-btn');
+const navLinks=document.getElementById('nav-links');
+mobileBtn.addEventListener('click',()=>{ navLinks.classList.toggle('active'); mobileBtn.classList.toggle('active'); });
+document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>{ navLinks.classList.remove('active'); mobileBtn.classList.remove('active'); }));
+
+// ZIG-ZAG REVEAL
+(function(){
+  const rows=document.querySelectorAll('.zz-feature-row');
+  if(!rows.length) return;
+  const io=new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('is-visible'); }); },{threshold:.15});
+  rows.forEach(r=>io.observe(r));
+})();
+
+// TAP TO REVEAL — expand extra detail text on image or hint tap
+document.querySelectorAll('.zz-feature-row').forEach(row=>{
+  const trigger = row.querySelector('.zz-image-box') || row.querySelector('.zz-tap-hint');
+  const hint = row.querySelector('.zz-tap-hint');
+  if(trigger){
+    trigger.addEventListener('click', ()=> row.classList.toggle('expanded'));
+  }
+  if(hint && hint !== trigger){
+    hint.addEventListener('click', ()=> row.classList.toggle('expanded'));
+  }
+});
+
+// BMI
+function calculateBMI(){
+  let h=document.getElementById('bmi-height').value, w=document.getElementById('bmi-weight').value;
+  document.getElementById('height-val').innerText=h;
+  document.getElementById('weight-val').innerText=w;
+  let m=h/100, bmi=(w/(m*m)).toFixed(1);
+  const scoreEl=document.getElementById('bmi-score'), catEl=document.getElementById('bmi-cat'),
+        titleEl=document.getElementById('plan-title'), descEl=document.getElementById('plan-desc'),
+        planBtn=document.getElementById('bmi-plan-btn');
+  scoreEl.innerText=bmi;
+  const boxEl=document.getElementById('bmi-results-box');
+  boxEl.classList.remove('bmi-under','bmi-normal','bmi-over','bmi-obese');
+  if(bmi<18.5){ catEl.innerText='Underweight'; titleEl.innerText='6 Month Membership Recommended'; descEl.innerText='Build strength and consistent training habits.'; planBtn.href='membership.html#plan-6-months'; boxEl.classList.add('bmi-under'); }
+  else if(bmi<24.9){ catEl.innerText='Normal Weight'; titleEl.innerText='3 Month Membership Recommended'; descEl.innerText='Maintain fitness and make consistent progress.'; planBtn.href='membership.html#plan-3-months'; boxEl.classList.add('bmi-normal'); }
+  else if(bmi<29.9){ catEl.innerText='Overweight'; titleEl.innerText='6 Month Membership Recommended'; descEl.innerText='Sustainable fat loss and strength development.'; planBtn.href='membership.html#plan-6-months'; boxEl.classList.add('bmi-over'); }
+  else { catEl.innerText='Obese'; titleEl.innerText='12 Month Membership Recommended'; descEl.innerText='A gradual, sustainable transformation.'; planBtn.href='membership.html#plan-12-months'; boxEl.classList.add('bmi-obese'); }
+}
+window.onload=calculateBMI;
+
+// REVIEW CARDS — JUMP EFFECT (pop on tap, dim siblings on hover/tap)
+document.querySelectorAll('.reviews-grid').forEach(grid=>{
+  const cards = grid.querySelectorAll('.review-card');
+  cards.forEach(card=>{
+    card.addEventListener('click', function(){
+      cards.forEach(c=>{ if(c!==this) c.classList.remove('is-popped'); });
+      this.classList.toggle('is-popped');
+      grid.classList.toggle('jump-active', !!grid.querySelector('.review-card.is-popped'));
+    });
+    card.addEventListener('mouseenter', ()=> grid.classList.add('jump-active'));
+    card.addEventListener('mouseleave', ()=>{
+      if(!grid.querySelector('.review-card.is-popped')) grid.classList.remove('jump-active');
+    });
+  });
+});
+
+// MAP
+function initTitanMap(){
+  var mapEl = document.getElementById('titan-map');
+  if(!mapEl || mapEl._titanMapInit) return;
+  mapEl._titanMapInit = true;
+
+  var map=L.map('titan-map',{scrollWheelZoom:false,zoomControl:false}).setView([21.248,81.625],13);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',{maxZoom:20,attribution:'© OpenStreetMap © CARTO'}).addTo(map);
+  var titanIcon = L.divIcon({
+    className: '',
+    html: '<div class="titan-map-marker"><div class="glow-ring"></div><div class="glow-core"></div></div>',
+    iconSize: [26,26],
+    iconAnchor: [13,13]
+  });
+  L.marker([21.2435,81.6280], {icon: titanIcon}).addTo(map)
+    .bindTooltip('TITAN FITNESS', {permanent:true, direction:'right', offset:[16,0], className:'titan-map-tooltip'});
+
+  // Force the map container to the real pixel size of its parent section,
+  // then invalidate — fixes the map rendering shorter than the section.
+  function fitMapToSection(){
+    var section = mapEl.closest('.map-section');
+    if(section){
+      mapEl.style.height = section.clientHeight + 'px';
+    }
+    map.invalidateSize();
+  }
+  fitMapToSection();
+  setTimeout(fitMapToSection, 300);
+  setTimeout(fitMapToSection, 1000);
+  window.addEventListener('load', fitMapToSection);
+  window.addEventListener('resize', fitMapToSection);
+  new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) fitMapToSection(); });
+  },{threshold:.05}).observe(mapEl);
+}
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initTitanMap);
+} else {
+  initTitanMap();
+}
+</script>
+
+</body>
+</html>

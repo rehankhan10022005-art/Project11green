@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Rankings | Titan Fitness</title>
+<meta name="description" content="Titan Fitness strength and leaderboard rankings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@700&family=Syncopate:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo"><img src="titanlogo.png" alt="Titan Logo" class="nav-logo-img"></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="membership.html">Memberships</a></li>
+    <li><a href="aboutus.html">About Us</a></li>
+    <li><a href="facilities.html">Facilities</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="rankings.html" style="color: var(--gold);">Rankings</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="mobile-nav-btn-container"><a href="membership.html" class="nav-btn">Join Now</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="nav-socials">
+      <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+      <a href="https://www.instagram.com/titangym999" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12.2 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+    </div>
+    <a href="membership.html" class="nav-btn">Join Now</a>
+  </div>
+  <div class="mobile-menu-btn" id="mobile-menu-btn"><span></span><span></span><span></span></div>
+</nav>
+
+
+<header class="page-hero" data-aos="fade-up">
+  <div class="page-hero-tag">Rankings Dashboard</div>
+  <h1>The Floor's <span>Leaderboard</span></h1>
+  <p>Monthly max-effort testing on bench, squat and deadlift, plus personal records visible to everyone in the gym.</p>
+</header>
+
+<section>
+  <div class="container">
+    <div class="stat-strip" data-aos="fade-up">
+      <div class="stat-item"><div class="num">214</div><div class="label">Total Members</div></div>
+      <div class="stat-item"><div class="num">87</div><div class="label">Active Members</div></div>
+      <div class="stat-item"><div class="num">572</div><div class="label">Top Total (KG)</div></div>
+      <div class="stat-item"><div class="num">12</div><div class="label">Records Broken 2026</div></div>
+    </div>
+
+    <div class="section-head" data-aos="fade-up"><div class="eyebrow">Live Standings</div><h2>Top 3 <span>Strongest</span></h2><p>Strength Total = best Bench + Squat + Deadlift.</p></div>
+
+    <div class="rank-tabs" data-aos="fade-up">
+      <button class="active" data-tab="strongest">Top 3 Strongest</button>
+      <button data-tab="records">All-Time Records</button>
+      <button data-tab="transformations">Transformations</button>
+    </div>
+
+    <div class="rank-panel" id="panel-strongest" data-aos="fade-up">
+      <div class="podium">
+        <div class="podium-card rank-2"><div class="podium-medal">2</div><div class="podium-photo"><img data-edit-id="podium-2nd-img" src="img/leaderboard/goku.jfif" alt="Goku"></div><div class="podium-name">Goku</div><div class="podium-tag">Bench 168 · Squat 195 · Deadlift 182</div><div class="podium-metric">545<span>KG Total</span></div></div>
+        <div class="podium-card rank-1"><div class="podium-medal">1</div><div class="podium-photo"><img data-edit-id="podium-1st-img" src="img/leaderboard/nightwing.jfif" alt="Rehan Rajput"></div><div class="podium-name">Rehan Rajput</div><div class="podium-tag">Bench 172 · Squat 205 · Deadlift 195</div><div class="podium-metric">572<span>KG Total</span></div></div>
+        <div class="podium-card rank-3"><div class="podium-medal">3</div><div class="podium-photo"><img data-edit-id="podium-3rd-img" src="img/leaderboard/modi.jfif" alt="Narendra Modi"></div><div class="podium-name">Narendra Modi</div><div class="podium-tag">Bench 155 · Squat 190 · Deadlift 175</div><div class="podium-metric">520<span>KG Total</span></div></div>
+      </div>
+      <p class="rank-foot-note">Strength Total leaderboard — 2026. Full top 10 available under "Full Leaderboard."</p>
+    </div>
+
+    <div class="rank-panel" id="panel-records" hidden data-aos="fade-up">
+      <div class="record-grid">
+        <div class="record-card"><div class="lift">Bench Press</div><div class="weight">172 KG</div><div class="holder">Held by Zoro</div><div class="date">Set March 2026</div></div>
+        <div class="record-card"><div class="lift">Squat</div><div class="weight">205 KG</div><div class="holder">Held by Sanji</div><div class="date">Set June 2026</div></div>
+        <div class="record-card"><div class="lift">Deadlift</div><div class="weight">240 KG</div><div class="holder">Held by Luffy</div><div class="date">Set May 2026</div></div>
+        <div class="record-card"><div class="lift">Strict Overhead Press</div><div class="weight">102 KG</div><div class="holder">Held by Franky</div><div class="date">Set January 2026</div></div>
+        <div class="record-card"><div class="lift">Strength Total</div><div class="weight">572 KG</div><div class="holder">Held by Rehan Rajput</div><div class="date">Set July 2026</div></div>
+        <div class="record-card"><div class="lift">Longest Membership Streak</div><div class="weight">12 Years</div><div class="holder">Held by Narendra Modi</div><div class="date">Ongoing since 2024</div></div>
+      </div>
+      <p class="rank-foot-note">Records are verified by a trainer and logged with video.</p>
+    </div>
+
+    <div class="rank-panel" id="panel-transformations" hidden data-aos="fade-up">
+      <div class="transform-grid">
+        <div class="transform-card">
+          <div class="ba-slider">
+            <img class="ba-before" data-edit-id="transform-1-before" src="img/leaderboard/nightwing.jfif" alt="Before">
+            <img class="ba-after" data-edit-id="transform-1-after" src="img/leaderboard/goku.jfif" alt="After">
+            <span class="ba-tag before-tag">Before</span>
+            <span class="ba-tag after-tag">After</span>
+            <div class="ba-handle"></div>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+          <div class="transform-name">Rehan Rajput</div>
+          <div class="transform-duration">8 Months</div>
+          <p class="transform-story">Dropped from 92kg to 78kg with a structured strength program and disciplined meal tracking, guided every week by his coach.</p>
+        </div>
+
+        <div class="transform-card">
+          <div class="ba-slider">
+            <img class="ba-before" data-edit-id="transform-2-before" src="img/leaderboard/modi.jfif" alt="Before">
+            <img class="ba-after" data-edit-id="transform-2-after" src="img/leaderboard/nightwing.jfif" alt="After">
+            <span class="ba-tag before-tag">Before</span>
+            <span class="ba-tag after-tag">After</span>
+            <div class="ba-handle"></div>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+          <div class="transform-name">Sahil Bajaj</div>
+          <div class="transform-duration">6 Months</div>
+          <p class="transform-story">Built 6kg of lean muscle through progressive overload training and a high-protein diet plan tailored to his goals.</p>
+        </div>
+
+        <div class="transform-card">
+          <div class="ba-slider">
+            <img class="ba-before" data-edit-id="transform-3-before" src="img/leaderboard/goku.jfif" alt="Before">
+            <img class="ba-after" data-edit-id="transform-3-after" src="img/leaderboard/modi.jfif" alt="After">
+            <span class="ba-tag before-tag">Before</span>
+            <span class="ba-tag after-tag">After</span>
+            <div class="ba-handle"></div>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+          <div class="transform-name">Spiderman</div>
+          <div class="transform-duration">1 Year</div>
+          <p class="transform-story">Combined consistent strength sessions with mobility and conditioning work to reshape his physique and improve overall fitness.</p>
+        </div>
+
+        <div class="transform-card">
+          <div class="ba-slider">
+            <img class="ba-before" data-edit-id="transform-4-before" src="img/leaderboard/nightwing.jfif" alt="Before">
+            <img class="ba-after" data-edit-id="transform-4-after" src="img/leaderboard/modi.jfif" alt="After">
+            <span class="ba-tag before-tag">Before</span>
+            <span class="ba-tag after-tag">After</span>
+            <div class="ba-handle"></div>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+          <div class="transform-name">Toji Fushiguro</div>
+          <div class="transform-duration">10 Months</div>
+          <p class="transform-story">Focused on compound lifts and recovery discipline, steadily increasing his total while cutting body fat to a lean, athletic frame.</p>
+        </div>
+
+        <div class="transform-card">
+          <div class="ba-slider">
+            <img class="ba-before" data-edit-id="transform-5-before" src="img/photos/trainers/trainers/hulk.jfif" alt="Before">
+            <img class="ba-after" data-edit-id="transform-5-after" src="img/photos/trainers/trainers/thor.jfif" alt="After">
+            <span class="ba-tag before-tag">Before</span>
+            <span class="ba-tag after-tag">After</span>
+            <div class="ba-handle"></div>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+          <div class="transform-name">Narendra Modi</div>
+          <div class="transform-duration">1 Year</div>
+          <p class="transform-story">Maintained a strict daily training routine and balanced nutrition to build strength while staying consistent across every season.</p>
+        </div>
+      </div>
+      <p class="rank-foot-note">Drag the slider on each photo to compare the before and after.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Titan Fitness. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/7389539555" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</a>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/firebase-config.js"></script>
+<script src="assets/admin-sync.js"></script>
+<script>
+AOS.init({ duration:1200, easing:'ease-in-out', once:true, offset:50 });
+window.addEventListener('scroll', function(){ document.getElementById('navbar').classList.toggle('scrolled', window.scrollY>50); });
+const mobileBtn=document.getElementById('mobile-menu-btn');
+const navLinks=document.getElementById('nav-links');
+mobileBtn.addEventListener('click',()=>{ navLinks.classList.toggle('active'); mobileBtn.classList.toggle('active'); });
+document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>{ navLinks.classList.remove('active'); mobileBtn.classList.remove('active'); }));
+(function(){
+  const rows=document.querySelectorAll('.zz-feature-row');
+  if(rows.length){ const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible');});},{threshold:.15}); rows.forEach(r=>io.observe(r)); }
+})();
+document.querySelectorAll('.acc-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    this.parentElement.classList.toggle('active');
+    const c=this.nextElementSibling;
+    c.style.maxHeight = c.style.maxHeight ? null : c.scrollHeight+'px';
+  });
+});
+
+
+const tabs=document.querySelectorAll('.rank-tabs button');
+const panels={ strongest:document.getElementById('panel-strongest'), records:document.getElementById('panel-records'), transformations:document.getElementById('panel-transformations') };
+tabs.forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const key=tab.dataset.tab;
+    Object.keys(panels).forEach(k=>{ panels[k].hidden = (k!==key); });
+  });
+});
+
+
+document.querySelectorAll('.ba-slider').forEach(function(slider){
+  const range = slider.querySelector('input[type=range]');
+  const after = slider.querySelector('.ba-after');
+  const handle = slider.querySelector('.ba-handle');
+  function update(val){
+    after.style.clipPath = 'inset(0 0 0 ' + val + '%)';
+    handle.style.left = val + '%';
+  }
+  range.addEventListener('input', function(){ update(this.value); });
+  update(range.value);
+});
+</script>
+</body>
+</html>
